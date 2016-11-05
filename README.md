@@ -10,22 +10,26 @@ Kohana wrapper module for the Amazon AWS PHP SDK.
 
 #### Install the module
 
+Replace xyz in the following with the Github author for your fork of this module.
+
 ```
-git submodule add git@github.com:dexamped/kohana-aws.git modules/kohana-aws
+git submodule add git@github.com:xyz/kohana-aws.git modules/kohana-aws
 git submodule update --init --recursive
 ```
 
 #### Load dependencies
 
-We have to install vendor's dependencies by running `composer install`
+Ensure Composer is available for your PHP project.
+
+Install the AWS SDK by running `composer require` from your project's root directory.
 
 ```
-composer install --working-dir=modules/kohana-aws/vendor/aws-sdk-php/
+composer require aws/aws-sdk-php
 ```
 
 #### Configuration
 
-Edit `application/bootstrap.php` and add the module:
+Edit `application/bootstrap.php` and add this module:
 
 ```
 Kohana::modules(array(
@@ -35,7 +39,7 @@ Kohana::modules(array(
 ));
 ```
 
-Copy the `modules/kohana-aws/config/aws.php` to `APPPATH/config/aws.php` and setup your config.
+Copy `modules/kohana-aws/config/aws.php` to `APPPATH/config/aws.php` and setup your config.
 
 ## Usage
 
